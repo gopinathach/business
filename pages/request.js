@@ -1,12 +1,12 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import { Table, Tag, Space, Input, Menu, Dropdown, Button } from "antd";
 import "antd/dist/antd.css";
 import { DownOutlined } from "@ant-design/icons";
 
 export default function request() {
   const { Search } = Input;
-  const [find, setFind] = useState('')
+  // const [find, setFind] = useState('')
 
   const menu = (
     <Menu>
@@ -149,16 +149,16 @@ export default function request() {
               placeholder="Search"
               allowClear
               onChange={(event) => {
-                setFind(event.target.value)
+                //setFind(event.target.value)
               }}
               style={{ width: 200 }}
             />
-            {data.filter((e)=>{
+            {/* {data.filter((e)=>{
               
               if(!find == '' && e.projectname.toLowerCase().includes(find.toLowerCase())){
                   return e
               }
-            })}
+            })} */}
           </div>
           <div className="content_right">
             <p>Filter</p>
@@ -169,7 +169,7 @@ export default function request() {
                   onClick={(e) => e.preventDefault()}
                   style={{ width: 150 }}
                 >
-                  All
+                  All   
                   <DownOutlined />
                 </Button>
               </Dropdown>
